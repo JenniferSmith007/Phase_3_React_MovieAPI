@@ -1,15 +1,18 @@
-import './App.css'
-import {Header} from './Components/header'
-function App() {
- 
+import "./App.css";
 
+import { Searchmovie } from "./Components/SearchMovie";
+import { FavoriteMovie } from "./Components/FavoriteMovie";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+function App() {
   return (
-    <div className="App">
-    <Header/>
-        
- 
-    </div>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Searchmovie />} />
+        <Route path="/favoritemovies" element={<FavoriteMovie />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
