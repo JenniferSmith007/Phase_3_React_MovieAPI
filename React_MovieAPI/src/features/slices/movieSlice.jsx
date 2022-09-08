@@ -1,5 +1,24 @@
-import { createSlice } from "@reduxjs/toolkit";
+import movieapi from'../../Components/movieapi'
 
+
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+
+
+
+
+
+
+
+export const asyncMovie = createAsyncThunk("movies/asyncMovie", async () => {
+    let apiKey = '896bcbd1'
+    let movieex = 'naruto'
+    const res = await movieapi.get(`?s=${movieex}&plot=full&apikey=${apiKey}`).catch((error) => {
+        console.log('error', error)
+    })
+    
+    return res.data
+  
+})
 const initialState = {
     movies: {},
 }
@@ -12,6 +31,18 @@ const movieSlice = createSlice({
         state.movies = payload
         
     }},
+    extraReducers: {
+        [asyncMovie.pending]: () => {
+            console.log("pending ")
+        },
+        [asyncMovie.fulfilled]: (state, {payload}) => {
+            console.log("fulfilled ")
+            return {...state, movies: payload}
+        },
+        [asyncMovie.rejected]: () => {
+            console.log("err wrong")
+        }
+    }
   
 })
 

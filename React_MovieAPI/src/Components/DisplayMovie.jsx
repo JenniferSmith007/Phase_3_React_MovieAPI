@@ -14,9 +14,9 @@ const DisplayMovie = () => {
 //     render = display.map((movie, index) => { <MoviesDisplayed data={movie} key={index}/>})
 //     console.log('this is render', render)
     let display =""
-    display = movies.Response === "True" ? (movies.Search.map((movie,index) => { return <MoviesDisplayed key={index} data={movie}/>}) ) : 
+    display = movies.Response === "True" ? (movies.Search.map((movie,index) => {return <MoviesDisplayed key={index} data={movie}/>}) ) : 
     (<div className="movies_err">{movies.Error}</div>)
-    
+
 
     return (
         <div className='displayy'>
