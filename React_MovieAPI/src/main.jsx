@@ -2,15 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 
-// import {store} from './store'
-// import {Provider} from "react-redux"
+import {store} from'./features/store'
+import {Provider} from "react-redux"
 // lib. that provides redux to the application 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* <Provider store ={store}> */}
+    <Provider store ={store}>
     <App />
-    {/* </Provider>  */}
+    </Provider> 
     {/* wrapp app by provider */}
   </React.StrictMode>
 )
