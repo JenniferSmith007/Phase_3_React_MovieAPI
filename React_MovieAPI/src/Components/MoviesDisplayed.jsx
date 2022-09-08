@@ -4,10 +4,9 @@
    const {data} = props
     return (
         <div>
-          
-   
-         <img src={data.Poster} alt='' />
-         <p>Title: {data.Title}</p>
+          <p>Title: {data.Title}</p>
+            <img src={data.Poster} alt='' />
+         
         </div>
     );
 };
