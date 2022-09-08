@@ -4,6 +4,7 @@ import movieapi from "./movieapi";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { addMovies } from "../features/slices/movieSlice";
+import DisplayMovie from "./DisplayMovie";
 
 export const Searchmovie = () => {
     let apiKey = '896bcbd1'
@@ -16,7 +17,7 @@ useEffect(() => {
             console.log('error', error)
         })
         dispatch(addMovies(res.data))
-      console.log(res.data.Search)  
+      console.log(res.data)  
       
     }
     getMovie()
@@ -33,7 +34,7 @@ useEffect(() => {
         <div>
                <Link to='/favoritemovies'className='favoritemovie-link'>favorite movies</Link>
             <Header/>
-         
+         <DisplayMovie/>
            <h1>hello</h1>
         </div>
     );
