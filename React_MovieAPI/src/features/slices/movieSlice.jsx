@@ -12,13 +12,17 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 export const asyncMovie = createAsyncThunk("movies/asyncMovie", async () => {
     let apiKey = '896bcbd1'
     let movieex = 'naruto'
-    const res = await movieapi.get(`?s=${movieex}&plot=full&apikey=${apiKey}`).catch((error) => {
+   
+    const res = await movieapi.get(`?s=${movieex}&apikey=${apiKey}`).catch((error) => {
         console.log('error', error)
     })
+    console.log(res.data)
     
     return res.data
   
 })
+
+
 const initialState = {
     movies: {},
 }

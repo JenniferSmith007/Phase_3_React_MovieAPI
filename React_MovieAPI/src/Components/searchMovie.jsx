@@ -27,7 +27,7 @@ dispatch(asyncMovie())
                <Link to='/favoritemovies'className='favoritemovie-link'>favorite movies</Link>
             <Header/>
          <DisplayMovie/>
-           <h1>hello</h1>
+         
         </div>
     );
 };

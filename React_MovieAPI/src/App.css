@@ -5,6 +5,10 @@
 
 body{
   background-color: ghostwhite;
+  /* display:flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center; */
 }
 .header-container{
   display: flex;
@@ -17,4 +21,19 @@ body{
   font-size: 5em;
   color:#5260E9;
   
+}
+.wrapper{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.displayy{
+  
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 15em;
+    grid-row-gap: 15em;
+    
 }

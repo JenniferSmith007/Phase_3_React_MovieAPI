@@ -8,21 +8,21 @@ import MoviesDisplayed from './MoviesDisplayed';
 const DisplayMovie = () => {
     const movies = useSelector(getMovies)
     console.log(movies)
-//    let display = movies.Search
-//     console.log(display)
-//     let render = ""
-//     render = display.map((movie, index) => { <MoviesDisplayed data={movie} key={index}/>})
-//     console.log('this is render', render)
+
     let display =""
-    display = movies.Response === "True" ? (movies.Search.map((movie,index) => {return <MoviesDisplayed key={index} data={movie}/>}) ) : 
+    display = movies.Response
+    === "True" ? (movies.Search.map((movie,index) => {return <MoviesDisplayed key={index} data={movie}/>}) ) : 
     (<div className="movies_err">{movies.Error}</div>)
+    console.log(display)
+
 
 
     return (
+        <div className='wrapper'>
         <div className='displayy'>
-            <h1>Movies</h1>
+           
     {display}
-   
+    </div>
         </div>
     );
 };

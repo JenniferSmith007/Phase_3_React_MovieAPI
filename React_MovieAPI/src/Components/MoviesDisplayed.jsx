@@ -4,7 +4,7 @@
    const {data} = props
     return (
         <div>
-          <p>Title: {data.Title}</p>
+          <p> {data.Title}</p>
             <img src={data.Poster} alt='' />
             <p>Year: {data.Year}</p>
             <p>ID: {data.imdbID}</p>
