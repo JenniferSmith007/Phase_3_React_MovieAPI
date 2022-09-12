@@ -1,7 +1,7 @@
 import "./App.css";
 
-import { Searchmovie } from "./Components/SearchMovie";
-import { FavoriteMovie } from "./Components/FavoriteMovie";
+import  Searchmovie  from "./Components/SearchMovie";
+import  FavoriteMovie  from "./Components/FavoriteMovie";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
